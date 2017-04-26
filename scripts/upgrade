@@ -1,0 +1,101 @@
+#!/bin/bash
+
+# Exit on command errors and treat unset variables as an error
+set -eu
+#=================================================
+# GENERIC STARTING
+#=================================================
+# IMPORT GENERIC HELPERS
+#=================================================
+
+source _common.sh
+source /usr/share/yunohost/helpers
+
+#=================================================
+# LOAD SETTINGS
+#=================================================
+# Set app specific variables
+app=$YNH_APP_INSTANCE_NAME
+
+# Check destination directory
+DESTDIR="/var/www/$app"
+[[ ! -d $DESTDIR ]] && ynh_die \
+"The destination directory '$DESTDIR' does not exist.\
+ The app is not correctly installed, you should remove it first."
+
+# Retrieve arguments
+domain=$(ynh_app_setting_get "$app" domain)
+path_url=$(ynh_app_setting_get "$app" path_url)
+path_url=$(ynh_normalize_url_path $path_url)
+final_path=$(ynh_app_setting_get "$app" final_path)
+
+#=================================================
+# MANAGE SCRIPT FAILURE
+#=================================================
+
+BACKUP_BEFORE_UPGRADE # Backup the current version of the app
+ynh_clean_setup () {
+    BACKUP_FAIL_UPGRADE
+}
+ynh_abort_if_errors	# Stop script if an error is detected
+
+
+#=================================================
+# DOWNLOAD, CHECK AND UNPACK SOURCE
+#=================================================
+
+# Create tmp directory and fetch app inside
+TMPDIR=$(ynh_mkdir_tmp)
+extract_sources "$TMPDIR"
+
+#=================================================
+# CREATE DEDICATED USER
+#=================================================
+
+ynh_system_user_create $app # Create dedicated user if not existing
+
+#=================================================
+# SPECIFIC SETUP
+#=================================================
+
+# Install files and set permissions
+sudo mv "$TMPDIR" "$final_path"
+
+# Set rights on directory
+sudo chown -R root: $final_path
+sudo chown -R $app: $final_path/cache
+sudo chmod 755 $final_path
+
+[ -f $final_path/whitelist.txt ] && sudo rm $final_path/whitelist.txt
+# Enable every bridge
+for i in $final_path/bridges/*.php ; do 
+  echo $(basename $i) | sed "s|Bridge.php$||g" | sudo tee -a $final_path/whitelist.txt
+done
+
+#=================================================
+# NGINX CONFIGURATION
+#=================================================
+
+nginx_conf=$PKGDIR/conf/nginx.conf
+
+ynh_replace_string "YNH_WWW_PATH" "$path_url" "$nginx_conf"
+ynh_replace_string "YNH_WWW_ALIAS" "$final_path" "$nginx_conf"
+ynh_replace_string "YNH_WWW_APP" "${app}" "$nginx_conf"
+sudo cp "$nginx_conf" "/etc/nginx/conf.d/${domain}.d/${app}.conf"
+
+# Copy and set php-fpm configuration
+phpfpm_conf="/etc/php5/fpm/pool.d/${app}.conf"
+ynh_replace_string "{POOLNAME}" "${app}" "$PKGDIR/conf/php-fpm.conf"
+ynh_replace_string "{DESTDIR}" "${final_path}" "$PKGDIR/conf/php-fpm.conf"
+ynh_replace_string "{USER}" "${app}" "$PKGDIR/conf/php-fpm.conf"
+sudo cp $PKGDIR/conf/php-fpm.conf "$phpfpm_conf"
+
+
+# Set SSOwat rules
+ynh_app_setting_set "$app" skipped_uris "/"
+
+#=================================================
+# RELOAD NGINX
+#=================================================
+sudo systemctl restart php5-fpm
+sudo systemctl reload nginx

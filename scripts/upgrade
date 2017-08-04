@@ -58,6 +58,9 @@ ynh_system_user_create $app # Create dedicated user if not existing
 # SPECIFIC SETUP
 #=================================================
 
+# Remove last version (we don't keep whitelist)
+ynh_secure_remove "$final_path"
+
 # Install files and set permissions
 sudo mv "$TMPDIR" "$final_path"
 
@@ -66,7 +69,6 @@ sudo chown -R root: $final_path
 sudo chown -R $app: $final_path/cache
 sudo chmod 755 $final_path
 
-[ -f $final_path/whitelist.txt ] && sudo rm $final_path/whitelist.txt
 # Enable every bridge
 for i in $final_path/bridges/*.php ; do 
   echo $(basename $i) | sed "s|Bridge.php$||g" | sudo tee -a $final_path/whitelist.txt

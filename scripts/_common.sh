@@ -3,13 +3,13 @@
 #
 
 # Package version
-VERSION="0.2"
+VERSION="2017-08-03"
 
 # Full sources tarball URL
-SOURCE_URL="https://github.com/RSS-Bridge/rss-bridge/archive/v${VERSION}.tar.gz"
+SOURCE_URL="https://github.com/RSS-Bridge/rss-bridge/archive/${VERSION}.tar.gz"
 
 # Full  sources tarball checksum
-SOURCE_SHA256="23ec537e9d00c64bc6143231495377f2ef4dc72c6826faec0e0be3dcc7f20e41"
+SOURCE_SHA256="14fa20d68843c58dbe4ac24b07b8329a98b8429fd4aea343927e41518a374117"
 
 # App package root directory should be the parent folder
 PKGDIR=$(cd ../; pwd)
@@ -278,4 +278,32 @@ ynh_system_user_delete () {
 	else
 		echo "The user $1 was not found" >&2
     fi
+}
+
+# Remove a file or a directory securely
+#
+# usage: ynh_secure_remove path_to_remove
+# | arg: path_to_remove - File or directory to remove
+ynh_secure_remove () {
+	path_to_remove=$1
+	forbidden_path=" \
+	/var/www \
+	/home/yunohost.app"
+
+	if [[ "$forbidden_path" =~ "$path_to_remove" \
+		# Match all paths or subpaths in $forbidden_path
+		|| "$path_to_remove" =~ ^/[[:alnum:]]+$ \
+		# Match all first level paths from / (Like /var, /root, etc...)
+		|| "${path_to_remove:${#path_to_remove}-1}" = "/" ]]
+		# Match if the path finishes by /. Because it seems there is an empty variable
+	then
+		echo "Avoid deleting $path_to_remove." >&2
+	else
+		if [ -e "$path_to_remove" ]
+		then
+			sudo rm -R "$path_to_remove"
+		else
+			echo "$path_to_remove wasn't deleted because it doesn't exist." >&2
+		fi
+	fi
 }

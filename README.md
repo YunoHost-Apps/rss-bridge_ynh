@@ -1,5 +1,8 @@
 rss-bridge for Yunohost
 ------------------------
+[![Install rss-bridge with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=rss-bridge)
+
+[![Integration level](https://dash.yunohost.org/integration/rss-bridge.svg)](https://ci-apps.yunohost.org/jenkins/job/rss-bridge%20%28Community%29/lastBuild/consoleFull)
 
 This is a rss-bridge package for YunoHost.
 

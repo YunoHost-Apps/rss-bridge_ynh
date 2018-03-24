@@ -3,13 +3,13 @@
 #
 
 # Package version
-VERSION="2017-08-19"
+VERSION="2018-03-11"
 
 # Full sources tarball URL
 SOURCE_URL="https://github.com/RSS-Bridge/rss-bridge/archive/${VERSION}.tar.gz"
 
 # Full  sources tarball checksum
-SOURCE_SHA256="176385ef1e0cc1ac929498515c446778027ae292635bf6addfec61eab3833b67"
+SOURCE_SHA256="b649c872983b2f55907a0b7089ac4dd562a322ef1cd661662a66f942262ba1c7"
 
 # App package root directory should be the parent folder
 PKGDIR=$(cd ../; pwd)
@@ -107,7 +107,7 @@ CHECK_FINALPATH () {	# Check if destination directory already exists
 #=================================================
 # FUTURE YUNOHOST HELPERS - TO BE REMOVED LATER
 #=================================================
- 
+
 # Normalize the url path syntax
 # Delete a file checksum from the app settings
 #

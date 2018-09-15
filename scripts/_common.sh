@@ -35,20 +35,10 @@ exec_as() {
   fi
 }
 
-# Execute a command through the wallabag console
-# usage: exec_console AS_USER WORKDIR COMMAND [ARG ...]
-exec_console() {
-  local AS_USER=$1
-  local WORKDIR=$2
-  shift 2
-  exec_as "$AS_USER" php "$WORKDIR/bin/console" --no-interaction --env=prod "$@"
-}
-
 # Download and extract sources to the given directory
-# usage: extract_sources DESTDIR [AS_USER]
+# usage: extract_sources DESTDIR
 extract_sources() {
   local DESTDIR=$1
-  local AS_USER=${2:-$USER}
 
   # retrieve and extract Roundcube tarball
   wb_tarball="/tmp/sources.tar.gz"
@@ -57,7 +47,7 @@ extract_sources() {
     || ynh_die "Unable to download sources tarball"
   echo "$SOURCE_SHA256 $wb_tarball" | sha256sum -c >/dev/null \
     || ynh_die "Invalid checksum of downloaded tarball"
-  exec_as "$AS_USER" tar xf "$wb_tarball" -C "$DESTDIR" --strip-components 1 \
+  tar xf "$wb_tarball" -C "$DESTDIR" --strip-components 1 \
     || ynh_die "Unable to extract sources tarball"
   rm -f "$wb_tarball"
 

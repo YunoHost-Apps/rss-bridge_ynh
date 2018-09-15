@@ -35,4 +35,4 @@
 	;;; Upgrade options
 		; commit=7a99e018f12d91876c84efd04e0a4e7f178fdd80
 			name=Upgrade to upstream version 2018-04-06
-			manifest_arg=domain=DOMAIN&path=PATH&with_carddav=1&with_enigma=1&
+			manifest_arg=domain=DOMAIN&path=PATH&

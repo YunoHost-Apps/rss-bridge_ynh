@@ -6,7 +6,7 @@ rss-bridge for Yunohost
 
 This is a rss-bridge package for YunoHost.
 
-**Shipped version:** 2019-03-17
+**Shipped version:** 2019-05-08
 
 [rss-bridge](https://github.com/RSS-Bridge/rss-bridge) is a PHP project capable of generating ATOM feeds for websites which don't have one.
 

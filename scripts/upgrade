@@ -78,12 +78,8 @@ done
 # NGINX CONFIGURATION
 #=================================================
 
-nginx_conf=$PKGDIR/conf/nginx.conf
-
-ynh_replace_string "YNH_WWW_PATH" "$path_url" "$nginx_conf"
-ynh_replace_string "YNH_WWW_ALIAS" "$final_path" "$nginx_conf"
-ynh_replace_string "YNH_WWW_APP" "${app}" "$nginx_conf"
-sudo cp "$nginx_conf" "/etc/nginx/conf.d/${domain}.d/${app}.conf"
+# Create a dedicated nginx config
+ynh_add_nginx_config
 
 # Copy and set php-fpm configuration
 phpfpm_conf="/etc/php5/fpm/pool.d/${app}.conf"

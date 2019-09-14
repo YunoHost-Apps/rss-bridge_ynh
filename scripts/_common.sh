@@ -3,13 +3,13 @@
 #
 
 # Package version
-VERSION="2019-07-06"
+VERSION="2019-09-12"
 
 # Full sources tarball URL
 SOURCE_URL="https://github.com/RSS-Bridge/rss-bridge/archive/${VERSION}.tar.gz"
 
 # Full  sources tarball checksum
-SOURCE_SHA256="305664f5d476e466aada52ed3d3f330cd60d3729a5b28a016a366fef0d918eeb"
+SOURCE_SHA256="1b4954f23936b972a3ad1a0fb731d31f56e37cb3d1b87bdce252bc7fb1f18d1b"
 
 # App package root directory should be the parent folder
 PKGDIR=$(cd ../; pwd)

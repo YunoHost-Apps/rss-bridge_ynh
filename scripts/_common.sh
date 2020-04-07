@@ -31,7 +31,7 @@ exec_as() {
     eval $@
   else
     # use sudo twice to be root and be allowed to use another user
-    sudo sudo -u "$USER" "$@"
+    sudo -u "$USER" "$@"
   fi
 }
 
@@ -65,8 +65,8 @@ WARNING () {	# Print on error output
 
 CHECK_SIZE () {	# Check if enough disk space available on backup storage
 	file_to_analyse=$1
-	backup_size=$(sudo du --summarize "$file_to_analyse" | cut -f1)
-	free_space=$(sudo df --output=avail "/home/yunohost.backup" | sed 1d)
+	backup_size=$(du --summarize "$file_to_analyse" | cut -f1)
+	free_space=$(df --output=avail "/home/yunohost.backup" | sed 1d)
 
 	if [ $free_space -le $backup_size ]
 	then

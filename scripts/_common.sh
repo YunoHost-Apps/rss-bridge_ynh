@@ -31,7 +31,7 @@ exec_as() {
     eval $@
   else
     # use sudo twice to be root and be allowed to use another user
-    sudo sudo -u "$USER" "$@"
+    sudo -u "$USER" "$@"
   fi
 }
 
@@ -63,14 +63,10 @@ WARNING () {	# Print on error output
 	$@ >&2
 }
 
-QUIET () {	# redirect standard output to /dev/null
-	$@ > /dev/null
-}
-
 CHECK_SIZE () {	# Check if enough disk space available on backup storage
 	file_to_analyse=$1
-	backup_size=$(sudo du --summarize "$file_to_analyse" | cut -f1)
-	free_space=$(sudo df --output=avail "/home/yunohost.backup" | sed 1d)
+	backup_size=$(du --summarize "$file_to_analyse" | cut -f1)
+	free_space=$(df --output=avail "/home/yunohost.backup" | sed 1d)
 
 	if [ $free_space -le $backup_size ]
 	then
@@ -80,32 +76,5 @@ CHECK_SIZE () {	# Check if enough disk space available on backup storage
 	fi
 }
 
-CHECK_USER () {	# Check user validity
-# $1 = User
-	ynh_user_exists "$1" || ynh_die "Wrong user"
-}
 
-CHECK_DOMAINPATH () {	# Check domain/path availability
-	sudo yunohost app checkurl $domain$path_url -a $app
-}
 
-CHECK_FINALPATH () {	# Check if destination directory already exists
-	final_path="/var/www/$app"
-	test ! -e "$final_path" || ynh_die "This path already contains a folder"
-}
-
-#=================================================
-# FUTURE YUNOHOST HELPERS - TO BE REMOVED LATER
-#=================================================
-
-# Normalize the url path syntax
-# Delete a file checksum from the app settings
-#
-# $app should be defined when calling this helper
-#
-# usage: ynh_remove_file_checksum file
-# | arg: file - The file for which the checksum will be deleted
-ynh_delete_file_checksum () {
-	local checksum_setting_name=checksum_${1//[\/ ]/_}	# Replace all '/' and ' ' by '_'
-	ynh_app_setting_delete $app $checksum_setting_name
-}

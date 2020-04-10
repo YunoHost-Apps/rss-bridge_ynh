@@ -79,7 +79,7 @@ fi
 if [ $change_domain -eq 1 ]
 then
   ynh_delete_file_checksum "$nginx_conf_path"
-	sudo mv $nginx_conf_path /etc/nginx/conf.d/$new_domain.d/$app.conf
+  mv $nginx_conf_path /etc/nginx/conf.d/$new_domain.d/$app.conf
   # Store file checksum for the new config file location
   ynh_store_file_checksum "/etc/nginx/conf.d/$new_domain.d/$app.conf"
 fi
@@ -90,4 +90,4 @@ fi
 # RELOAD NGINX
 #=================================================
 
-sudo systemctl reload nginx
+systemctl reload nginx

@@ -30,9 +30,11 @@ path_url=$YNH_APP_ARG_PATH
 # CHECK IF THE APP CAN BE INSTALLED WITH THESE ARGS
 #=================================================
 
-path_url=$(ynh_normalize_url_path $path_url)	# Check and normalize path
-CHECK_DOMAINPATH	# Check domain and path availability
-CHECK_FINALPATH # Check if destination directory is not already in use
+final_path=/var/www/$app
+test ! -e "$final_path" || ynh_die --message="This path already contains a folder"
+
+# Register (book) web path
+ynh_webpath_register --app=$app --domain=$domain --path_url=$path_url
 
 #=================================================
 # STORE SETTINGS FROM MANIFEST
@@ -65,16 +67,16 @@ ynh_system_user_create $app	# Create a dedicated system user
 #=================================================
 
 # Install files and set permissions
-sudo mv "$TMPDIR" "$final_path"
+mv "$TMPDIR" "$final_path"
 
 # Set rights on directory
-sudo chown -R root: $final_path
-sudo chown -R $app: $final_path/cache
-sudo chmod 755 $final_path
+chown -R root: $final_path
+chown -R $app: $final_path/cache
+chmod 755 $final_path
 
 # Enable every bridge
 for i in $final_path/bridges/*.php ; do 
-  echo $(basename $i) | sed "s|Bridge.php$||g" | sudo tee -a $final_path/whitelist.txt
+  echo $(basename $i) | sed "s|Bridge.php$||g" | tee -a $final_path/whitelist.txt
 done
 
 #=================================================
@@ -89,7 +91,7 @@ phpfpm_conf="/etc/php5/fpm/pool.d/${app}.conf"
 ynh_replace_string "{POOLNAME}" "${app}" "$PKGDIR/conf/php-fpm.conf"
 ynh_replace_string "{DESTDIR}" "${final_path}" "$PKGDIR/conf/php-fpm.conf"
 ynh_replace_string "{USER}" "${app}" "$PKGDIR/conf/php-fpm.conf"
-sudo cp $PKGDIR/conf/php-fpm.conf "$phpfpm_conf"
+cp $PKGDIR/conf/php-fpm.conf "$phpfpm_conf"
 
 # Set SSOwat rules
 ynh_app_setting_set "$app" skipped_uris "/"
@@ -97,5 +99,5 @@ ynh_app_setting_set "$app" skipped_uris "/"
 #=================================================
 # RELOAD NGINX
 #=================================================
-sudo systemctl restart php5-fpm
-sudo systemctl reload nginx
+systemctl restart php5-fpm
+systemctl reload nginx

@@ -62,16 +62,16 @@ ynh_system_user_create $app # Create dedicated user if not existing
 ynh_secure_remove "$final_path"
 
 # Install files and set permissions
-sudo mv "$TMPDIR" "$final_path"
+mv "$TMPDIR" "$final_path"
 
 # Set rights on directory
-sudo chown -R root: $final_path
-sudo chown -R $app: $final_path/cache
-sudo chmod 755 $final_path
+chown -R root: $final_path
+chown -R $app: $final_path/cache
+chmod 755 $final_path
 
 # Enable every bridge
 for i in $final_path/bridges/*.php ; do 
-  echo $(basename $i) | sed "s|Bridge.php$||g" | sudo tee -a $final_path/whitelist.txt
+  echo $(basename $i) | sed "s|Bridge.php$||g" | tee -a $final_path/whitelist.txt
 done
 
 #=================================================
@@ -86,7 +86,7 @@ phpfpm_conf="/etc/php5/fpm/pool.d/${app}.conf"
 ynh_replace_string "{POOLNAME}" "${app}" "$PKGDIR/conf/php-fpm.conf"
 ynh_replace_string "{DESTDIR}" "${final_path}" "$PKGDIR/conf/php-fpm.conf"
 ynh_replace_string "{USER}" "${app}" "$PKGDIR/conf/php-fpm.conf"
-sudo cp $PKGDIR/conf/php-fpm.conf "$phpfpm_conf"
+cp $PKGDIR/conf/php-fpm.conf "$phpfpm_conf"
 
 
 # Set SSOwat rules
@@ -95,5 +95,5 @@ ynh_app_setting_set "$app" skipped_uris "/"
 #=================================================
 # RELOAD NGINX
 #=================================================
-sudo systemctl restart php5-fpm
-sudo systemctl reload nginx
+systemctl restart php5-fpm
+systemctl reload nginx

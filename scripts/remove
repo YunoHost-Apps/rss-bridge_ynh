@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# Treat unset variables as an error
-set -u
 #=================================================
-# GENERIC STARTING
+# GENERIC START
 #=================================================
 # IMPORT GENERIC HELPERS
 #=================================================
@@ -14,11 +12,12 @@ source /usr/share/yunohost/helpers
 #=================================================
 # LOAD SETTINGS
 #=================================================
+ynh_script_progression --message="Loading installation settings..." --weight=1
 
 app=$YNH_APP_INSTANCE_NAME
 
-domain=$(ynh_app_setting_get $app domain)
-db_name=$(ynh_app_setting_get $app db_name)
+domain=$(ynh_app_setting_get --app=$app --key=domain)
+final_path=$(ynh_app_setting_get --app=$app --key=final_path)
 
 #=================================================
 # STANDARD REMOVE
@@ -27,22 +26,39 @@ db_name=$(ynh_app_setting_get $app db_name)
 #=================================================
 # REMOVE APP MAIN DIR
 #=================================================
+ynh_script_progression --message="Removing app main directory..." --weight=2
 
-ynh_secure_remove "/var/www/$app"
+# Remove the app directory securely
+ynh_secure_remove --file="$final_path"
 
 #=================================================
-# REMOVE NGINX AND PHP-FPM CONFIGURATION
+# REMOVE NGINX CONFIGURATION
 #=================================================
+ynh_script_progression --message="Removing nginx web server configuration..." --weight=2
 
-ynh_secure_remove --file="/etc/php5/fpm/pool.d/${app}.conf"
-ynh_secure_remove --file="/etc/nginx/conf.d/${domain}.d/${app}.conf"
+# Remove the dedicated nginx config
+ynh_remove_nginx_config
 
-# Reload services
-systemctl restart php5-fpm
-systemctl reload nginx
+#=================================================
+# REMOVE PHP-FPM CONFIGURATION
+#=================================================
+ynh_script_progression --message="Removing php-fpm configuration..." --weight=1
 
+# Remove the dedicated php-fpm config
+ynh_remove_fpm_config
+
+#=================================================
+# GENERIC FINALIZATION
 #=================================================
 # REMOVE DEDICATED USER
 #=================================================
+ynh_script_progression --message="Removing the dedicated system user..." --weight=1
 
-ynh_system_user_delete $app
+# Delete a system user
+ynh_system_user_delete --username=$app
+
+#=================================================
+# END OF SCRIPT
+#=================================================
+
+ynh_script_progression --message="Removal of $app completed" --last

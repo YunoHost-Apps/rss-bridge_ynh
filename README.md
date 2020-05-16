@@ -1,17 +1,16 @@
-rss-bridge for Yunohost
-------------------------
+# rss-bridge for Yunohost
+
+[![Integration level](https://dash.yunohost.org/integration/rss-bridge.svg)](https://dash.yunohost.org/appci/app/rss-bridge)  
 [![Install rss-bridge with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=rss-bridge)
 
-[![Integration level](https://dash.yunohost.org/integration/rss-bridge.svg)](https://ci-apps.yunohost.org/jenkins/job/rss-bridge%20%28Community%29/lastBuild/consoleFull)
+> *This package allow you to install rss-bridge quickly and simply on a YunoHost server.  
+If you don't have YunoHost, please see [here](https://yunohost.org/#/install) to know how to install and enjoy it.*
 
-This is a rss-bridge package for YunoHost.
-
-**Shipped version:** 2020-02-26
-
+## Overview
 [rss-bridge](https://github.com/RSS-Bridge/rss-bridge) is a PHP project capable of generating ATOM feeds for websites which don't have one.
 
 
-## Supported sites/pages (main)
+### Supported sites/pages (main)
 
 
  * `FlickrExplore` : [Latest interesting images](http://www.flickr.com/explore) from Flickr
@@ -34,7 +33,7 @@ This is a rss-bridge package for YunoHost.
 
 Plus [many other bridges](bridges/) to enable, thanks to the community
 
-## Output format
+### Output format
 
 Output format can take several forms:
 
@@ -44,14 +43,24 @@ Output format can take several forms:
  * `Html` : Simple html page.
  * `Plaintext` : raw text (php object, as returned by print_r)
 
+**Shipped version:** 2020-02-26
+
 ## Screenshots
+
 ![image](https://github.com/RSS-Bridge/rss-bridge/wiki/images/screenshot_rss-bridge_welcome.png)
 
 RSS-Bridge hashtag (#rss-bridge) search on Twitter, in ATOM format (as displayed by Firefox):
 
 ![image](https://github.com/RSS-Bridge/rss-bridge/wiki/images/screenshot_twitterbridge_atom.png)
 
-## Enabling/Disabling bridges
+
+## Demo
+
+* [Official demo](https://wtf.roflcopter.fr/rss-bridge/)
+
+## Configuration
+
+### Enabling/Disabling bridges
 
 By default, the script creates `whitelist.txt` and adds the main bridges (see above). you can edit it:
 
@@ -61,8 +70,51 @@ By default, the script creates `whitelist.txt` and adds the main bridges (see ab
 
 As a matter  of simplicity, this YunoHost package enables every bridge by default.
 
+## Documentation
+
+ * Official documentation: https://github.com/RSS-Bridge/rss-bridge/wiki
+ * YunoHost documentation: If specific documentation is needed, feel free to contribute.
+
+## YunoHost specific features
+
+#### Multi-users support
+
+This is application is public and there's no notion of user.
+
+#### Supported architectures
+
+* x86-64b - [![Build Status](https://ci-apps.yunohost.org/ci/logs/rss-bridge%20%28Apps%29.svg)](https://ci-apps.yunohost.org/ci/apps/rss-bridge/)
+* ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/rss-bridge%20%28Apps%29.svg)](https://ci-apps-arm.yunohost.org/ci/apps/rss-bridge/)
+
+## Limitations
+
+* Any known limitations.
+
+## Additional information
+
+* Other information you would add about this application
+
+**More information on the documentation page:**  
+https://yunohost.org/packaging_apps
+
 ## Links
 
  * Report a bug: https://github.com/YunoHost-Apps/rss-bridge_ynh/issues
- * rss-bridge website: https://github.com/RSS-Bridge/rss-bridge
+ * App website: https://github.com/RSS-Bridge/rss-bridge
+ * Upstream app repository: https://github.com/RSS-Bridge/rss-bridge
  * YunoHost website: https://yunohost.org/
+
+---
+
+Developers info
+----------------
+
+**Only if you want to use a testing branch for coding, instead of merging directly into master.**
+Please do your pull request to the [testing branch](https://github.com/YunoHost-Apps/rss-bridge_ynh/tree/testing).
+
+To try the testing branch, please proceed like that.
+```
+sudo yunohost app install https://github.com/YunoHost-Apps/rss-bridge_ynh/tree/testing --debug
+or
+sudo yunohost app upgrade rss-bridge -u https://github.com/YunoHost-Apps/rss-bridge_ynh/tree/testing --debug
+```

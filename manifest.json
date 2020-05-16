@@ -8,14 +8,14 @@
     },
     "url": "https://github.com/RSS-Bridge/rss-bridge",
     "license": "Unlicense",
-    "version": "2020-02-26~ynh1",
+    "version": "2020-02-26~ynh2",
     "maintainer": {
         "name": "JimboJoe",
         "email": "jimmy@monin.net"
     },
     "multi_instance": true,
     "requirements": {
-        "yunohost": ">= 2.7.2"
+        "yunohost": ">= 3.7"
     },
     "services": [
         "nginx",

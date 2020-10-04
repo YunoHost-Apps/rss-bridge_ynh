@@ -100,8 +100,7 @@ This is application is public and there's no notion of user.
 
 ---
 
-Developers info
-----------------
+## Developers info
 
 Please do your pull request to the [testing branch](https://github.com/YunoHost-Apps/rss-bridge_ynh/tree/testing).
 

@@ -19,6 +19,7 @@ app=$YNH_APP_INSTANCE_NAME
 domain=$(ynh_app_setting_get --app=$app --key=domain)
 path_url=$(ynh_app_setting_get --app=$app --key=path)
 final_path=$(ynh_app_setting_get --app=$app --key=final_path)
+phpversion=$(ynh_app_setting_get --app=$app --key=phpversion)
 
 #=================================================
 # CHECK VERSION
@@ -48,10 +49,6 @@ ynh_abort_if_errors
 path_url=$(ynh_normalize_url_path --path_url=$path_url)
 
 #=================================================
-# STANDARD UPGRADE STEPS
-#=================================================
-
-#=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
 
@@ -66,9 +63,9 @@ fi
 #=================================================
 # NGINX CONFIGURATION
 #=================================================
-ynh_script_progression --message="Upgrading nginx web server configuration..." --weight=2
+ynh_script_progression --message="Upgrading NGINX web server configuration..." --weight=2
 
-# Create a dedicated nginx config
+# Create a dedicated NGINX config
 ynh_add_nginx_config
 
 #=================================================
@@ -82,24 +79,20 @@ ynh_system_user_create --username=$app
 #=================================================
 # PHP-FPM CONFIGURATION
 #=================================================
-ynh_script_progression --message="Upgrading php-fpm configuration..." --weight=3
+ynh_script_progression --message="Upgrading PHP-FPM configuration..." --weight=3
 
-# Create a dedicated php-fpm config
-ynh_add_fpm_config
+# Create a dedicated PHP-FPM config
+ynh_add_fpm_config --phpversion=$YNH_PHP_VERSION
 
 #=================================================
 # SPECIFIC UPGRADE
 #=================================================
 
-ynh_script_progression --message="Configuring rss-bridge..." --weight=2
+ynh_script_progression --message="Configuring RSS-Bridge..." --weight=2
 # Enable every bridge
 for i in $final_path/bridges/*.php ; do 
   echo $(basename $i) | sed "s|Bridge.php$||g" | tee -a $final_path/whitelist.txt
 done
-
-#=================================================
-# GENERIC FINALIZATION
-#=================================================
 
 #=================================================
 # SECURE FILES AND DIRECTORIES
@@ -120,7 +113,7 @@ ynh_app_setting_set --app=$app --key=unprotected_uris --value="/"
 #=================================================
 # RELOAD NGINX
 #=================================================
-ynh_script_progression --message="Reloading nginx web server..." --weight=1
+ynh_script_progression --message="Reloading NGINX web server..." --weight=1
 
 ynh_systemd_action --service_name=nginx --action=reload
 
@@ -128,4 +121,4 @@ ynh_systemd_action --service_name=nginx --action=reload
 # END OF SCRIPT
 #=================================================
 
-ynh_script_progression --message="Upgrade of $app completed" --last
+ynh_script_progression --message="Upgrade of RSS-Bridge completed" --last

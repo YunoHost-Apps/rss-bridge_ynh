@@ -1,14 +1,14 @@
 {
+    "name": "RSS-Bridge",
     "id": "rss-bridge",
-    "name": "rss-bridge",
     "packaging_format": 1,
     "description": {
-        "en": "PHP project capable of generating ATOM feeds for websites which don't have one.",
-        "fr": "Projet Web permettant de générer des flux ATOM pour les sites web n'en fournissant pas"
+        "en": "RSS and Atom feed generator for websites that don't have one.",
+        "fr": "Générateur de flux RSS et Atom pour les sites Web qui n'en ont pas."
     },
+    "version": "2020-02-26~ynh3",
     "url": "https://github.com/RSS-Bridge/rss-bridge",
     "license": "Unlicense",
-    "version": "2020-02-26~ynh3",
     "maintainer": {
         "name": "JimboJoe",
         "email": "jimmy@monin.net"

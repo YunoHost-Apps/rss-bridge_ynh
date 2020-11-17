@@ -6,7 +6,7 @@
         "en": "RSS and Atom feed generator for websites that don't have one.",
         "fr": "Générateur de flux RSS et Atom pour les sites Web qui n'en ont pas."
     },
-    "version": "2020-02-26~ynh3",
+    "version": "2020-11-10~ynh1",
     "url": "https://github.com/RSS-Bridge/rss-bridge",
     "license": "Unlicense",
     "maintainer": {

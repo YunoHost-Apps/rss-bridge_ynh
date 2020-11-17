@@ -9,7 +9,7 @@ If you don't have YunoHost, please see [here](https://yunohost.org/#/install) to
 ## Overview
 [RSS-Bridge](https://github.com/RSS-Bridge/rss-bridge) is a PHP project capable of generating ATOM feeds for websites which don't have one.
 
-**Shipped version:** 2020-02-26
+**Shipped version:** 2020-11-10
 
 ### Supported sites/pages (main)
 

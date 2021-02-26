@@ -15,11 +15,11 @@
     },
     "multi_instance": true,
     "requirements": {
-        "yunohost": ">= 3.7"
+        "yunohost": ">= 4.0.0"
     },
     "services": [
         "nginx",
-        "php7.0-fpm",
+        "php7.3-fpm",
         "mysql"
     ],
     "arguments": {

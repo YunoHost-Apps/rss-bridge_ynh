@@ -13,14 +13,9 @@
 		upgrade=1	from_commit=7a99e018f12d91876c84efd04e0a4e7f178fdd80
 		backup_restore=1
 		multi_instance=1
-		wrong_user=1
-		wrong_path=1
 		port_already_use=0
 		change_url=1
-	;;; Levels
-		# If the level 5 (Package linter) is forced to 1. Please add justifications here.
-		Level 5=auto
-	;;; Upgrade options
-		; commit=7a99e018f12d91876c84efd04e0a4e7f178fdd80
-			name=Upgrade to upstream version 2018-04-06
-			manifest_arg=domain=DOMAIN&path=PATH&
+;;; Upgrade options
+	; commit=7a99e018f12d91876c84efd04e0a4e7f178fdd80
+		name=Upgrade to upstream version 2018-04-06
+		manifest_arg=domain=DOMAIN&path=PATH&

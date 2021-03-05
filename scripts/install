@@ -110,11 +110,7 @@ chown -R $app: $final_path/cache
 #=================================================
 ynh_script_progression --message="Configuring permissions..." --weight=1
 
-# Make app public if necessary
-if [ $is_public -eq 1 ]
-then
-	ynh_permission_update --permission="main" --add="visitors"
-fi
+ynh_permission_update --permission="main" --add="visitors"
 
 #=================================================
 # RELOAD NGINX

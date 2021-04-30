@@ -6,7 +6,7 @@
         "en": "RSS and Atom feed generator for websites that don't have one.",
         "fr": "Générateur de flux RSS et Atom pour les sites Web qui n'en ont pas."
     },
-    "version": "2020-11-10~ynh1",
+    "version": "2021-04-25~ynh1",
     "url": "https://github.com/RSS-Bridge/rss-bridge",
     "license": "Unlicense",
     "maintainer": {
@@ -15,11 +15,11 @@
     },
     "multi_instance": true,
     "requirements": {
-        "yunohost": ">= 3.7"
+        "yunohost": ">= 4.1.0"
     },
     "services": [
         "nginx",
-        "php7.0-fpm",
+        "php7.3-fpm",
         "mysql"
     ],
     "arguments": {
@@ -27,19 +27,11 @@
             {
                 "name": "domain",
                 "type": "domain",
-                "ask": {
-                    "en": "Choose a domain for RSS-Bridge",
-                    "fr": "Choisissez un domaine pour RSS-Bridge"
-                },
                 "example": "domain.org"
             },
             {
                 "name": "path",
                 "type": "path",
-                "ask": {
-                    "en": "Choose a path for RSS-Bridge",
-                    "fr": "Choisissez un chemin pour RSS-Bridge"
-                },
                 "example": "/rss-bridge",
                 "default": "/rss-bridge"
             }

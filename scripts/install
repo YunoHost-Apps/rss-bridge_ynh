@@ -82,14 +82,14 @@ ynh_system_user_create --username=$app
 ynh_script_progression --message="Configuring PHP-FPM..." --weight=3
 
 # Create a dedicated PHP-FPM config
-ynh_add_fpm_config --phpversion=$YNH_PHP_VERSION
+ynh_add_fpm_config
 phpversion=$(ynh_app_setting_get --app=$app --key=phpversion)
 
 #=================================================
 # SPECIFIC SETUP
 #=================================================
-
 ynh_script_progression --message="Configuring RSS-Bridge..." --weight=1
+
 # Enable every bridge
 for i in $final_path/bridges/*.php ; do 
   echo $(basename $i) | sed "s|Bridge.php$||g" | tee -a $final_path/whitelist.txt
@@ -108,10 +108,9 @@ chown -R $app: $final_path/cache
 #=================================================
 # SETUP SSOWAT
 #=================================================
-ynh_script_progression --message="Configuring SSOwat..." --weight=1
+ynh_script_progression --message="Configuring permissions..." --weight=1
 
-# unprotected_uris allows SSO credentials to be passed anyway.
-ynh_app_setting_set --app=$app --key=unprotected_uris --value="/"
+ynh_permission_update --permission="main" --add="visitors"
 
 #=================================================
 # RELOAD NGINX

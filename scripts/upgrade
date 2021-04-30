@@ -28,6 +28,18 @@ phpversion=$(ynh_app_setting_get --app=$app --key=phpversion)
 upgrade_type=$(ynh_check_app_version_changed)
 
 #=================================================
+# ENSURE DOWNWARD COMPATIBILITY
+#=================================================
+ynh_script_progression --message="Ensuring downward compatibility..." --weight=1
+
+# Cleaning legacy permissions
+if ynh_legacy_permissions_exists; then
+	ynh_legacy_permissions_delete_all
+
+	ynh_app_setting_delete --app=$app --key=is_public
+fi
+
+#=================================================
 # BACKUP BEFORE UPGRADE THEN ACTIVE TRAP
 #=================================================
 ynh_script_progression --message="Backing up the app before upgrading (may take a while)..." --weight=3
@@ -40,13 +52,6 @@ ynh_clean_setup () {
 }
 # Exit if an error occurs during the execution of the script
 ynh_abort_if_errors
-
-#=================================================
-# CHECK THE PATH
-#=================================================
-
-# Normalize the URL path syntax
-path_url=$(ynh_normalize_url_path --path_url=$path_url)
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
@@ -82,7 +87,7 @@ ynh_system_user_create --username=$app
 ynh_script_progression --message="Upgrading PHP-FPM configuration..." --weight=3
 
 # Create a dedicated PHP-FPM config
-ynh_add_fpm_config --phpversion=$YNH_PHP_VERSION
+ynh_add_fpm_config
 
 #=================================================
 # SPECIFIC UPGRADE
@@ -101,14 +106,6 @@ done
 # Set permissions on app files
 chown -R root: $final_path
 chown -R $app: $final_path/cache
-
-#=================================================
-# SETUP SSOWAT
-#=================================================
-ynh_script_progression --message="Upgrading SSOwat configuration..." --weight=1
-
-# unprotected_uris allows SSO credentials to be passed anyway
-ynh_app_setting_set --app=$app --key=unprotected_uris --value="/"
 
 #=================================================
 # RELOAD NGINX

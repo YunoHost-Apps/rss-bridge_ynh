@@ -9,7 +9,7 @@ If you don't have YunoHost, please see [here](https://yunohost.org/#/install) to
 ## Overview
 [RSS-Bridge](https://github.com/RSS-Bridge/rss-bridge) is a PHP project capable of generating ATOM feeds for websites which don't have one.
 
-**Shipped version:** 2020-11-10
+**Shipped version:** 2021-04-25
 
 ### Supported sites/pages (main)
 
@@ -80,8 +80,8 @@ This is application is public and there's no notion of user.
 
 #### Supported architectures
 
-* x86-64 - [![Build Status](https://ci-apps.yunohost.org/ci/logs/rss-bridge%20%28Apps%29.svg)](https://ci-apps.yunohost.org/ci/apps/rss-bridge/)
-* ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/rss-bridge%20%28Apps%29.svg)](https://ci-apps-arm.yunohost.org/ci/apps/rss-bridge/)
+* x86-64 - [![Build Status](https://ci-apps.yunohost.org/ci/logs/rss-bridge.svg)](https://ci-apps.yunohost.org/ci/apps/rss-bridge/)
+* ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/rss-bridge.svg)](https://ci-apps-arm.yunohost.org/ci/apps/rss-bridge/)
 
 ## Limitations
 

@@ -8,6 +8,13 @@
     },
     "version": "2021-04-25~ynh1",
     "url": "https://github.com/RSS-Bridge/rss-bridge",
+    "upstream": {
+        "license": "Unlicense",
+        "website": "https://github.com/RSS-Bridge/rss-bridge",
+        "demo": "https://wtf.roflcopter.fr/rss-bridge/",
+        "admindoc": "https://github.com/RSS-Bridge/rss-bridge/wiki",
+        "code": "https://github.com/RSS-Bridge/rss-bridge"
+    },
     "license": "Unlicense",
     "maintainer": {
         "name": "JimboJoe",
@@ -15,7 +22,7 @@
     },
     "multi_instance": true,
     "requirements": {
-        "yunohost": ">= 4.1.0"
+        "yunohost": ">= 4.2.0"
     },
     "services": [
         "nginx",

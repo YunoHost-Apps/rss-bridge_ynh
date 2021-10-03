@@ -3,8 +3,8 @@
     "id": "rss-bridge",
     "packaging_format": 1,
     "description": {
-        "en": "RSS and Atom feed generator for websites that don't have one.",
-        "fr": "Générateur de flux RSS et Atom pour les sites Web qui n'en ont pas."
+        "en": "RSS and Atom feed generator for websites that don't have one",
+        "fr": "Générateur de flux RSS et Atom pour les sites Web qui n'en ont pas"
     },
     "version": "2021-04-25~ynh1",
     "url": "https://github.com/RSS-Bridge/rss-bridge",
@@ -22,7 +22,7 @@
     },
     "multi_instance": true,
     "requirements": {
-        "yunohost": ">= 4.2.0"
+        "yunohost": ">= 4.2.4"
     },
     "services": [
         "nginx",
@@ -33,8 +33,7 @@
         "install" : [
             {
                 "name": "domain",
-                "type": "domain",
-                "example": "domain.org"
+                "type": "domain"
             },
             {
                 "name": "path",

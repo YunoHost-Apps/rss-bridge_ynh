@@ -15,17 +15,9 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Overview
 
-RSS and Atom feed generator for websites that don't have one.
+RSS-Bridge is a PHP project capable of generating RSS and Atom feeds for websites that don't have one. It can be used on webservers or as a stand-alone application in CLI mode.
 
-**Shipped version:** 2021-04-25~ynh1
-
-**Demo:** https://wtf.roflcopter.fr/rss-bridge/
-
-## Screenshots
-
-![](./doc/screenshots/screenshot_rss-bridge_welcome.png)
-
-## Disclaimers / important information
+Important: RSS-Bridge is not a feed reader or feed aggregator, but a tool to generate feeds that are consumed by feed readers and feed aggregators. Find a list of feed aggregators on Wikipedia.
 
 ### Supported sites/pages (main)
 
@@ -58,6 +50,17 @@ Output format can take several forms:
  * `Json` : Json, for consumption by other applications.
  * `Html` : Simple html page.
  * `Plaintext` : raw text (php object, as returned by print_r)
+ 
+
+**Shipped version:** 2021-04-25~ynh1
+
+**Demo:** https://wtf.roflcopter.fr/rss-bridge/
+
+## Screenshots
+
+![](./doc/screenshots/screenshot_rss-bridge_welcome.png)
+
+## Disclaimers / important information
 
 ## Configuration
 

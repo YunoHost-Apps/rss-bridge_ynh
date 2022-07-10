@@ -5,7 +5,7 @@ It shall NOT be edited by hand.
 
 # RSS-Bridge for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/rss-bridge.svg)](https://dash.yunohost.org/appci/app/rss-bridge) ![](https://ci-apps.yunohost.org/ci/badges/rss-bridge.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/rss-bridge.maintain.svg)  
+[![Integration level](https://dash.yunohost.org/integration/rss-bridge.svg)](https://dash.yunohost.org/appci/app/rss-bridge) ![Working status](https://ci-apps.yunohost.org/ci/badges/rss-bridge.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/rss-bridge.maintain.svg)  
 [![Install RSS-Bridge with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rss-bridge)
 
 *[Lire ce readme en français.](./README_fr.md)*
@@ -58,7 +58,7 @@ Output format can take several forms:
 
 ## Screenshots
 
-![](./doc/screenshots/screenshot_rss-bridge_welcome.png)
+![Screenshot of RSS-Bridge](./doc/screenshots/screenshot_rss-bridge_welcome.png)
 
 ## Disclaimers / important information
 
@@ -80,21 +80,22 @@ This is application is public and there's no notion of user.
 
 ## Documentation and resources
 
-* Official app website: https://github.com/RSS-Bridge/rss-bridge
-* Official admin documentation: https://github.com/RSS-Bridge/rss-bridge/wiki
-* Upstream app code repository: https://github.com/RSS-Bridge/rss-bridge
-* YunoHost documentation for this app: https://yunohost.org/app_rss-bridge
-* Report a bug: https://github.com/YunoHost-Apps/rss-bridge_ynh/issues
+* Official app website: <https://github.com/RSS-Bridge/rss-bridge>
+* Official admin documentation: <https://github.com/RSS-Bridge/rss-bridge/wiki>
+* Upstream app code repository: <https://github.com/RSS-Bridge/rss-bridge>
+* YunoHost documentation for this app: <https://yunohost.org/app_rss-bridge>
+* Report a bug: <https://github.com/YunoHost-Apps/rss-bridge_ynh/issues>
 
 ## Developer info
 
 Please send your pull request to the [testing branch](https://github.com/YunoHost-Apps/rss-bridge_ynh/tree/testing).
 
 To try the testing branch, please proceed like that.
-```
+
+``` bash
 sudo yunohost app install https://github.com/YunoHost-Apps/rss-bridge_ynh/tree/testing --debug
 or
 sudo yunohost app upgrade rss-bridge -u https://github.com/YunoHost-Apps/rss-bridge_ynh/tree/testing --debug
 ```
 
-**More info regarding app packaging:** https://yunohost.org/packaging_apps
+**More info regarding app packaging:** <https://yunohost.org/packaging_apps>

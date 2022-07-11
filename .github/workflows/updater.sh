@@ -96,8 +96,9 @@ echo "... conf/$src.src updated"
 # GENERIC FINALIZATION
 #=================================================
 
+clean_version=${version//-/.}
 # Replace new version in manifest
-echo "$(jq -s --indent 4 ".[] | .version = \"$version~ynh1\"" manifest.json)" > manifest.json
+echo "$(jq -s --indent 4 ".[] | .version = \"$clean_version~ynh1\"" manifest.json)" > manifest.json
 
 # No need to update the README, yunohost-bot takes care of it
 

@@ -1,5 +1,5 @@
-SOURCE_URL=https://github.com/RSS-Bridge/rss-bridge/archive/2021-04-25.tar.gz
-SOURCE_SUM=19adf5a55d4db5383625a43aa62892593e493303a7bf772d8be0d199f6d1c3bb
+SOURCE_URL=https://github.com/RSS-Bridge/rss-bridge/archive/refs/tags/2022-06-14.tar.gz
+SOURCE_SUM=88daee9604adcb2193ee771c260bcf422a806c284a46c4f263d42cf323d42fe1
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=true

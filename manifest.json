@@ -10,7 +10,6 @@
     "url": "https://github.com/RSS-Bridge/rss-bridge",
     "upstream": {
         "license": "Unlicense",
-        "website": "https://github.com/RSS-Bridge/rss-bridge",
         "demo": "https://wtf.roflcopter.fr/rss-bridge/",
         "admindoc": "https://github.com/RSS-Bridge/rss-bridge/wiki",
         "code": "https://github.com/RSS-Bridge/rss-bridge"

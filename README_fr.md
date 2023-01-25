@@ -5,15 +5,15 @@ It shall NOT be edited by hand.
 
 # RSS-Bridge pour YunoHost
 
-[![Niveau d'intégration](https://dash.yunohost.org/integration/rss-bridge.svg)](https://dash.yunohost.org/appci/app/rss-bridge) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/rss-bridge.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/rss-bridge.maintain.svg)  
+[![Niveau d’intégration](https://dash.yunohost.org/integration/rss-bridge.svg)](https://dash.yunohost.org/appci/app/rss-bridge) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/rss-bridge.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/rss-bridge.maintain.svg)
 [![Installer RSS-Bridge avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rss-bridge)
 
 *[Read this readme in english.](./README.md)*
 
-> *Ce package vous permet d'installer RSS-Bridge rapidement et simplement sur un serveur YunoHost.
-Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l'installer et en profiter.*
+> *Ce package vous permet d’installer RSS-Bridge rapidement et simplement sur un serveur YunoHost.
+Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l’installer et en profiter.*
 
-## Vue d'ensemble
+## Vue d’ensemble
 
 RSS-Bridge is a PHP project capable of generating RSS and Atom feeds for websites that don't have one. It can be used on webservers or as a stand-alone application in CLI mode.
 
@@ -52,13 +52,13 @@ Output format can take several forms:
  * `Plaintext` : raw text (php object, as returned by print_r)
  
 
-**Version incluse :** 2022.06.14~ynh1
+**Version incluse :** 2022.06.14~ynh2
 
 **Démo :** https://wtf.roflcopter.fr/rss-bridge/
 
-## Captures d'écran
+## Captures d’écran
 
-![Capture d'écran de RSS-Bridge](./doc/screenshots/screenshot_rss-bridge_welcome.png)
+![Capture d’écran de RSS-Bridge](./doc/screenshots/screenshot_rss-bridge_welcome.png)
 
 ## Avertissements / informations importantes
 
@@ -80,9 +80,8 @@ This is application is public and there's no notion of user.
 
 ## Documentations et ressources
 
-* Site officiel de l'app : <https://github.com/RSS-Bridge/rss-bridge>
-* Documentation officielle de l'admin : <https://github.com/RSS-Bridge/rss-bridge/wiki>
-* Dépôt de code officiel de l'app : <https://github.com/RSS-Bridge/rss-bridge>
+* Documentation officielle de l’admin : <https://github.com/RSS-Bridge/rss-bridge/wiki>
+* Dépôt de code officiel de l’app : <https://github.com/RSS-Bridge/rss-bridge>
 * Documentation YunoHost pour cette app : <https://yunohost.org/app_rss-bridge>
 * Signaler un bug : <https://github.com/YunoHost-Apps/rss-bridge_ynh/issues>
 
@@ -98,4 +97,4 @@ ou
 sudo yunohost app upgrade rss-bridge -u https://github.com/YunoHost-Apps/rss-bridge_ynh/tree/testing --debug
 ```
 
-**Plus d'infos sur le packaging d'applications :** <https://yunohost.org/packaging_apps>
+**Plus d’infos sur le packaging d’applications :** <https://yunohost.org/packaging_apps>

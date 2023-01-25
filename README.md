@@ -5,7 +5,7 @@ It shall NOT be edited by hand.
 
 # RSS-Bridge for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/rss-bridge.svg)](https://dash.yunohost.org/appci/app/rss-bridge) ![Working status](https://ci-apps.yunohost.org/ci/badges/rss-bridge.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/rss-bridge.maintain.svg)  
+[![Integration level](https://dash.yunohost.org/integration/rss-bridge.svg)](https://dash.yunohost.org/appci/app/rss-bridge) ![Working status](https://ci-apps.yunohost.org/ci/badges/rss-bridge.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/rss-bridge.maintain.svg)
 [![Install RSS-Bridge with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rss-bridge)
 
 *[Lire ce readme en français.](./README_fr.md)*
@@ -52,7 +52,7 @@ Output format can take several forms:
  * `Plaintext` : raw text (php object, as returned by print_r)
  
 
-**Shipped version:** 2022.06.14~ynh1
+**Shipped version:** 2022.06.14~ynh2
 
 **Demo:** https://wtf.roflcopter.fr/rss-bridge/
 
@@ -80,7 +80,6 @@ This is application is public and there's no notion of user.
 
 ## Documentation and resources
 
-* Official app website: <https://github.com/RSS-Bridge/rss-bridge>
 * Official admin documentation: <https://github.com/RSS-Bridge/rss-bridge/wiki>
 * Upstream app code repository: <https://github.com/RSS-Bridge/rss-bridge>
 * YunoHost documentation for this app: <https://yunohost.org/app_rss-bridge>

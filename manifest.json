@@ -6,11 +6,10 @@
         "en": "RSS and Atom feed generator for websites that don't have one",
         "fr": "Générateur de flux RSS et Atom pour les sites Web qui n'en ont pas"
     },
-    "version": "2022.06.14~ynh1",
+    "version": "2022.06.14~ynh2",
     "url": "https://github.com/RSS-Bridge/rss-bridge",
     "upstream": {
         "license": "Unlicense",
-        "website": "https://github.com/RSS-Bridge/rss-bridge",
         "demo": "https://wtf.roflcopter.fr/rss-bridge/",
         "admindoc": "https://github.com/RSS-Bridge/rss-bridge/wiki",
         "code": "https://github.com/RSS-Bridge/rss-bridge"
@@ -21,7 +20,7 @@
         "email": "jimmy@monin.net"
     },
     "requirements": {
-        "yunohost": ">= 4.3.0"
+        "yunohost": ">= 11.0.9"
     },
     "multi_instance": true,
     "services": [

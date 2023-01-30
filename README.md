@@ -52,7 +52,7 @@ Output format can take several forms:
  * `Plaintext` : raw text (php object, as returned by print_r)
  
 
-**Shipped version:** 2022.06.14~ynh2
+**Shipped version:** 2022.06.14~ynh3
 
 **Demo:** https://wtf.roflcopter.fr/rss-bridge/
 

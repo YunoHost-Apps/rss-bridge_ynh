@@ -6,6 +6,7 @@ It shall NOT be edited by hand.
 # RSS-Bridge for YunoHost
 
 [![Integration level](https://dash.yunohost.org/integration/rss-bridge.svg)](https://dash.yunohost.org/appci/app/rss-bridge) ![Working status](https://ci-apps.yunohost.org/ci/badges/rss-bridge.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/rss-bridge.maintain.svg)
+
 [![Install RSS-Bridge with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rss-bridge)
 
 *[Lire ce readme en français.](./README_fr.md)*

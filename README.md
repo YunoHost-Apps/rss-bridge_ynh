@@ -61,26 +61,9 @@ Output format can take several forms:
 
 ![Screenshot of RSS-Bridge](./doc/screenshots/screenshot_rss-bridge_welcome.png)
 
-## Disclaimers / important information
-
-## Configuration
-
-### Enabling/Disabling bridges
-
-By default, the script creates `whitelist.txt` and adds the main bridges (see above). you can edit it:
-
- * to enable extra bridges (one bridge per line)
- * to disable main bridges (remove the line)
- * to enable all bridges (just one wildcard `*` as file content)
-
-As a matter  of simplicity, this YunoHost package enables every bridge by default.
-
-#### Multi-users support
-
-This is application is public and there's no notion of user.
-
 ## Documentation and resources
 
+* Official app website: <https://github.com/RSS-Bridge/rss-bridge>
 * Official admin documentation: <https://github.com/RSS-Bridge/rss-bridge/wiki>
 * Upstream app code repository: <https://github.com/RSS-Bridge/rss-bridge>
 * YunoHost documentation for this app: <https://yunohost.org/app_rss-bridge>

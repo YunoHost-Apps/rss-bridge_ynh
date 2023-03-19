@@ -63,7 +63,6 @@ Output format can take several forms:
 
 ## Documentation and resources
 
-* Official app website: <https://github.com/RSS-Bridge/rss-bridge>
 * Official admin documentation: <https://github.com/RSS-Bridge/rss-bridge/wiki>
 * Upstream app code repository: <https://github.com/RSS-Bridge/rss-bridge>
 * YunoHost documentation for this app: <https://yunohost.org/app_rss-bridge>

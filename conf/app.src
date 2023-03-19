@@ -1,6 +1,6 @@
-SOURCE_URL=https://github.com/RSS-Bridge/rss-bridge/archive/refs/tags/2022-06-14.tar.gz
-SOURCE_SUM=88daee9604adcb2193ee771c260bcf422a806c284a46c4f263d42cf323d42fe1
+SOURCE_URL=https://github.com/RSS-Bridge/rss-bridge/archive/refs/heads/master.zip
+SOURCE_SUM=c39b875e1b2c047662b06366f63a6888f6fba3c5146e2034433f06a7e40594d3
 SOURCE_SUM_PRG=sha256sum
-SOURCE_FORMAT=tar.gz
+SOURCE_FORMAT=zip
 SOURCE_IN_SUBDIR=true
 SOURCE_FILENAME=

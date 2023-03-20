@@ -47,5 +47,5 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.apt]
-    packages = "php8.1-fpm"
+    packages = "php8.1-fpm, php8.1-mbstring"
     

@@ -5,7 +5,7 @@ name = "RSS-Bridge"
 description.en = "RSS and Atom feed generator for websites that don't have one"
 description.fr = "Générateur de flux RSS et Atom pour les sites Web qui n'en ont pas"
 
-version = "2023-03-22~ynh2"
+version = "2023-03-22~ynh1"
 
 maintainers = ["JimboJoe"]
 

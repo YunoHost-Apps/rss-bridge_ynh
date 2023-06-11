@@ -7,7 +7,7 @@ description.fr = "Générateur de flux RSS et Atom pour les sites Web qui n'en o
 
 version = "2023.03.22~ynh1"
 
-maintainers = ["JimboJoe"]
+maintainers = ["JimboJoe","Lapineige"]
 
 [upstream]
 license = "Unlicense"

@@ -35,8 +35,8 @@ ram.runtime = "50M"
 
 [resources]
         [resources.sources.main]
-        url = "https://github.com/RSS-Bridge/rss-bridge/archive/refs/tags/2023-03-22.tar.gz"
-        sha256 = "7bc6ad3220ad6a699583be6763aebc39ecb9e3bb2454f3f0add88c1e7ae93cfc"
+        url = "https://github.com/RSS-Bridge/rss-bridge/archive/refs/tags/2023-07-11.tar.gz"
+        sha256 = "28b44f32906c51d22e5efaf9a238db96838a22ca343b748593eac1803c26e807"
 
     [resources.system_user]
 

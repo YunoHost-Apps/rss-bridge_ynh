@@ -39,7 +39,7 @@ ynh_add_nginx_config
 ynh_script_progression --message="Configuring RSS-Bridge..." --weight=1
 
 # Remove faulty bridge
-$ynh_secure_remove --file=$install_dir/bridges/PepperBridgeAbstract.php
+ynh_secure_remove --file=$install_dir/bridges/PepperBridgeAbstract.php
 
 # Enable every bridge
 for i in $install_dir/bridges/*.php ; do 

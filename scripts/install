@@ -38,10 +38,7 @@ ynh_add_nginx_config
 #=================================================
 ynh_script_progression --message="Configuring RSS-Bridge..." --weight=1
 
-# Enable every bridge
-for i in $install_dir/bridges/*.php ; do 
-  echo $(basename $i) | sed "s|Bridge.php$||g" | tee -a $install_dir/whitelist.txt
-done
+echo \* > $install_dir/whitelist.txt
 
 #=================================================
 # END OF SCRIPT

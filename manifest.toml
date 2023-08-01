@@ -5,7 +5,7 @@ name = "RSS-Bridge"
 description.en = "RSS and Atom feed generator for websites that don't have one"
 description.fr = "Générateur de flux RSS et Atom pour les sites Web qui n'en ont pas"
 
-version = "2023.03.22~ynh1"
+version = "2023.07.13~ynh1"
 
 maintainers = ["JimboJoe","Lapineige"]
 
@@ -35,8 +35,8 @@ ram.runtime = "50M"
 
 [resources]
         [resources.sources.main]
-        url = "https://github.com/RSS-Bridge/rss-bridge/archive/refs/tags/2023-03-22.tar.gz"
-        sha256 = "7bc6ad3220ad6a699583be6763aebc39ecb9e3bb2454f3f0add88c1e7ae93cfc"
+        url = "https://github.com/RSS-Bridge/rss-bridge/archive/refs/tags/2023-07-13.tar.gz"
+        sha256 = "2aacd86a6c5387660782b881d7b07bd278477e55913e63c4dd6aae09e02b9d50"
 
     [resources.system_user]
 

@@ -5,7 +5,7 @@ name = "RSS-Bridge"
 description.en = "RSS and Atom feed generator for websites that don't have one"
 description.fr = "Générateur de flux RSS et Atom pour les sites Web qui n'en ont pas"
 
-version = "2023.07.13~ynh1"
+version = "2023.07.13~ynh2"
 
 maintainers = ["JimboJoe","Lapineige"]
 
@@ -16,7 +16,7 @@ admindoc = "https://github.com/RSS-Bridge/rss-bridge/wiki"
 code = "https://github.com/RSS-Bridge/rss-bridge"
 
 [integration]
-yunohost = ">= 11.1.15"
+yunohost = ">= 11.2"
 architectures = "all"
 multi_instance = true
 ldap = false
@@ -33,6 +33,10 @@ ram.runtime = "50M"
     type = "path"
     default = "/rss-bridge"
 
+    [install.init_main_permission]
+    type = "group"
+    default = "visitors"
+
 [resources]
         [resources.sources.main]
         url = "https://github.com/RSS-Bridge/rss-bridge/archive/refs/tags/2023-07-13.tar.gz"
@@ -46,5 +50,5 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.apt]
-    packages = "php8.1-fpm, php8.1-mbstring, php8.1-xml, php8.1-curl"
+    packages = "php8.2-fpm, php8.2-mbstring, php8.2-xml, php8.2-curl"
     

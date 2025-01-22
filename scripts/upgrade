@@ -16,7 +16,7 @@ ynh_app_setting_set_default --key=php_post_max_size --value=50M
 #=================================================
 ynh_script_progression "Upgrading source files..."
 
-ynh_setup_source --dest_dir="$install_dir" --keep="whitelist.txt"
+ynh_setup_source --dest_dir="$install_dir" --keep="whitelist.txt config.ini.php"
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
@@ -33,7 +33,7 @@ ynh_config_add_nginx
 ynh_script_progression "Updating $app's configuration files..."
 
 # Enable every bridge
-echo \* > $install_dir/whitelist.txt
+#echo \* > $install_dir/whitelist.txt
 
 #=================================================
 # END OF SCRIPT

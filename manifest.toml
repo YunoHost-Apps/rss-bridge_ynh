@@ -5,7 +5,7 @@ name = "RSS-Bridge"
 description.en = "RSS and Atom feed generator for websites that don't have one"
 description.fr = "Générateur de flux RSS et Atom pour les sites Web qui n'en ont pas"
 
-version = "2025.01.02~ynh1"
+version = "2025.01.02~ynh2"
 
 maintainers = ["JimboJoe","Lapineige"]
 
@@ -56,5 +56,5 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.apt]
-    packages = "php8.3-mbstring, php8.3-xml, php8.3-curl"
+    packages = "php8.3-mbstring, php8.3-xml, php8.3-curl, php8.3-zip"
     

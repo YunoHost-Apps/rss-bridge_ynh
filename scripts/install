@@ -18,18 +18,18 @@ ynh_script_progression "Setting up source files..."
 ynh_setup_source --dest_dir="$install_dir"
 
 #=================================================
-# PHP-FPM CONFIGURATION
+# SYSTEM CONFIGURATION
 #=================================================
-ynh_script_progression "Configuring PHP-FPM..."
+ynh_script_progression "Adding system configurations related to $app..."
 
 ynh_config_add_phpfpm
 
 ynh_config_add_nginx
 
 #=================================================
-# CONFIGURE RSS-BRIDGE
+# APP INITIAL CONFIGURATION
 #=================================================
-ynh_script_progression "Configuring RSS-Bridge..."
+ynh_script_progression "Adding $app's configuration files..."
 
 echo \* > $install_dir/whitelist.txt
 

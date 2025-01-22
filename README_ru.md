@@ -1,22 +1,22 @@
 <!--
-Este archivo README esta generado automaticamente<https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
-No se debe editar a mano.
+Важно: этот README был автоматически сгенерирован <https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
+Он НЕ ДОЛЖЕН редактироваться вручную.
 -->
 
-# RSS-Bridge para Yunohost
+# RSS-Bridge для YunoHost
 
-[![Nivel de integración](https://apps.yunohost.org/badge/integration/rss-bridge)](https://ci-apps.yunohost.org/ci/apps/rss-bridge/)
-![Estado funcional](https://apps.yunohost.org/badge/state/rss-bridge)
-![Estado En Mantención](https://apps.yunohost.org/badge/maintained/rss-bridge)
+[![Уровень интеграции](https://apps.yunohost.org/badge/integration/rss-bridge)](https://ci-apps.yunohost.org/ci/apps/rss-bridge/)
+![Состояние работы](https://apps.yunohost.org/badge/state/rss-bridge)
+![Состояние сопровождения](https://apps.yunohost.org/badge/maintained/rss-bridge)
 
-[![Instalar RSS-Bridge con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rss-bridge)
+[![Установите RSS-Bridge с YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rss-bridge)
 
-*[Leer este README en otros idiomas.](./ALL_README.md)*
+*[Прочтите этот README на других языках.](./ALL_README.md)*
 
-> *Este paquete le permite instalarRSS-Bridge rapidamente y simplement en un servidor YunoHost.*  
-> *Si no tiene YunoHost, visita [the guide](https://yunohost.org/install) para aprender como instalarla.*
+> *Этот пакет позволяет Вам установить RSS-Bridge быстро и просто на YunoHost-сервер.*  
+> *Если у Вас нет YunoHost, пожалуйста, посмотрите [инструкцию](https://yunohost.org/install), чтобы узнать, как установить его.*
 
-## Descripción general
+## Обзор
 
 RSS-Bridge is a PHP project capable of generating RSS and Atom feeds for websites that don't have one. It can be used on webservers or as a stand-alone application in CLI mode.
 
@@ -55,31 +55,31 @@ Output format can take several forms:
  * `Plaintext` : raw text (php object, as returned by print_r)
  
 
-**Versión actual:** 2025.01.02~ynh1
+**Поставляемая версия:** 2025.01.02~ynh1
 
-**Demo:** <https://wtf.roflcopter.fr/rss-bridge/>
+**Демо-версия:** <https://wtf.roflcopter.fr/rss-bridge/>
 
-## Capturas
+## Снимки экрана
 
-![Captura de RSS-Bridge](./doc/screenshots/screenshot_rss-bridge_welcome.png)
+![Снимок экрана RSS-Bridge](./doc/screenshots/screenshot_rss-bridge_welcome.png)
 
-## Documentaciones y recursos
+## Документация и ресурсы
 
-- Documentación administrador oficial: <https://github.com/RSS-Bridge/rss-bridge/wiki>
-- Repositorio del código fuente oficial de la aplicación : <https://github.com/RSS-Bridge/rss-bridge>
-- Catálogo YunoHost: <https://apps.yunohost.org/app/rss-bridge>
-- Reportar un error: <https://github.com/YunoHost-Apps/rss-bridge_ynh/issues>
+- Официальная документация администратора: <https://github.com/RSS-Bridge/rss-bridge/wiki>
+- Репозиторий кода главной ветки приложения: <https://github.com/RSS-Bridge/rss-bridge>
+- Магазин YunoHost: <https://apps.yunohost.org/app/rss-bridge>
+- Сообщите об ошибке: <https://github.com/YunoHost-Apps/rss-bridge_ynh/issues>
 
-## Información para desarrolladores
+## Информация для разработчиков
 
-Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/rss-bridge_ynh/tree/testing).
+Пришлите Ваш запрос на слияние в [ветку `testing`](https://github.com/YunoHost-Apps/rss-bridge_ynh/tree/testing).
 
-Para probar la rama `testing`, sigue asÍ:
+Чтобы попробовать ветку `testing`, пожалуйста, сделайте что-то вроде этого:
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/rss-bridge_ynh/tree/testing --debug
-o
+или
 sudo yunohost app upgrade rss-bridge -u https://github.com/YunoHost-Apps/rss-bridge_ynh/tree/testing --debug
 ```
 
-**Mas informaciones sobre el empaquetado de aplicaciones:** <https://yunohost.org/packaging_apps>
+**Больше информации о пакетировании приложений:** <https://yunohost.org/packaging_apps>

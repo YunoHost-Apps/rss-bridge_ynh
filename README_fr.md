@@ -5,7 +5,9 @@ Il NE doit PAS être modifié à la main.
 
 # RSS-Bridge pour YunoHost
 
-[![Niveau d’intégration](https://dash.yunohost.org/integration/rss-bridge.svg)](https://dash.yunohost.org/appci/app/rss-bridge) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/rss-bridge.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/rss-bridge.maintain.svg)
+[![Niveau d’intégration](https://apps.yunohost.org/badge/integration/rss-bridge)](https://ci-apps.yunohost.org/ci/apps/rss-bridge/)
+![Statut du fonctionnement](https://apps.yunohost.org/badge/state/rss-bridge)
+![Statut de maintenance](https://apps.yunohost.org/badge/maintained/rss-bridge)
 
 [![Installer RSS-Bridge avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rss-bridge)
 
@@ -53,7 +55,7 @@ Output format can take several forms:
  * `Plaintext` : raw text (php object, as returned by print_r)
  
 
-**Version incluse :** 2024.02.02~ynh1
+**Version incluse :** 2025.01.02~ynh1
 
 **Démo :** <https://wtf.roflcopter.fr/rss-bridge/>
 

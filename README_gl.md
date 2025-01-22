@@ -5,7 +5,9 @@ NON debe editarse manualmente.
 
 # RSS-Bridge para YunoHost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/rss-bridge.svg)](https://dash.yunohost.org/appci/app/rss-bridge) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/rss-bridge.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/rss-bridge.maintain.svg)
+[![Nivel de integración](https://apps.yunohost.org/badge/integration/rss-bridge)](https://ci-apps.yunohost.org/ci/apps/rss-bridge/)
+![Estado de funcionamento](https://apps.yunohost.org/badge/state/rss-bridge)
+![Estado de mantemento](https://apps.yunohost.org/badge/maintained/rss-bridge)
 
 [![Instalar RSS-Bridge con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rss-bridge)
 
@@ -16,7 +18,7 @@ NON debe editarse manualmente.
 
 ## Vista xeral
 
-RSS-Bridge is a PHP project capable of generating RSS and Atom feeds for websites that don't have one. It can be used on webservers or as a stand-alone application in CLI mode.
+RSS-Bridge is a project capable of generating RSS and Atom feeds for websites that don't have one. It can be used on webservers or as a stand-alone application in CLI mode.
 
 Important: RSS-Bridge is not a feed reader or feed aggregator, but a tool to generate feeds that are consumed by feed readers and feed aggregators. Find a list of feed aggregators on Wikipedia.
 
@@ -53,7 +55,7 @@ Output format can take several forms:
  * `Plaintext` : raw text (php object, as returned by print_r)
  
 
-**Versión proporcionada:** 2024.02.02~ynh1
+**Versión proporcionada:** 2025.01.02~ynh1
 
 **Demo:** <https://wtf.roflcopter.fr/rss-bridge/>
 

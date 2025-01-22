@@ -5,7 +5,9 @@ No se debe editar a mano.
 
 # RSS-Bridge para Yunohost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/rss-bridge.svg)](https://dash.yunohost.org/appci/app/rss-bridge) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/rss-bridge.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/rss-bridge.maintain.svg)
+[![Nivel de integración](https://apps.yunohost.org/badge/integration/rss-bridge)](https://ci-apps.yunohost.org/ci/apps/rss-bridge/)
+![Estado funcional](https://apps.yunohost.org/badge/state/rss-bridge)
+![Estado En Mantención](https://apps.yunohost.org/badge/maintained/rss-bridge)
 
 [![Instalar RSS-Bridge con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rss-bridge)
 
@@ -16,7 +18,7 @@ No se debe editar a mano.
 
 ## Descripción general
 
-RSS-Bridge is a PHP project capable of generating RSS and Atom feeds for websites that don't have one. It can be used on webservers or as a stand-alone application in CLI mode.
+RSS-Bridge is a project capable of generating RSS and Atom feeds for websites that don't have one. It can be used on webservers or as a stand-alone application in CLI mode.
 
 Important: RSS-Bridge is not a feed reader or feed aggregator, but a tool to generate feeds that are consumed by feed readers and feed aggregators. Find a list of feed aggregators on Wikipedia.
 
@@ -53,7 +55,7 @@ Output format can take several forms:
  * `Plaintext` : raw text (php object, as returned by print_r)
  
 
-**Versión actual:** 2024.02.02~ynh1
+**Versión actual:** 2025.01.02~ynh1
 
 **Demo:** <https://wtf.roflcopter.fr/rss-bridge/>
 
@@ -70,7 +72,7 @@ Output format can take several forms:
 
 ## Información para desarrolladores
 
-Por favor enviar sus correcciones a la [`branch testing`](https://github.com/YunoHost-Apps/rss-bridge_ynh/tree/testing
+Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/rss-bridge_ynh/tree/testing).
 
 Para probar la rama `testing`, sigue asÍ:
 

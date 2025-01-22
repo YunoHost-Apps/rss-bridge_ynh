@@ -1,9 +1,16 @@
-### Enabling/Disabling bridges
+### Enabling/disabling bridges
 
-By default, the script creates `whitelist.txt` and adds the main bridges (see above). you can edit it:
+As a matter  of simplicity, YunoHost package enables all bridge by default.
 
- * to enable extra bridges (one bridge per line)
- * to disable main bridges (remove the line)
- * to enable all bridges (just one wildcard `*` as file content)
+If you dont want all bridges enabled do like this in `__INSTALL_DIR__/config.ini.php`:
+```
 
-As a matter  of simplicity, this YunoHost package enables every bridge by default.
+[system]
+
+; Only these 3 bridges are enabled
+enabled_bridges[] = CssSelectorBridge
+enabled_bridges[] = FeedMerge
+enabled_bridges[] = FeedReducerBridge
+
+;enabled_bridges[] = *
+```

@@ -1,9 +1,17 @@
-### Activation/Désactivation des passerelles
+### Activation/désactivation des passerelles
 
-Par défaut, le script crée `whitelist.txt` et ajoute les principales passerelles (voir ci-dessus). Vous pouvez l'éditer :
+Pour des raisons de simplicité, le paquetage YunoHost active toutes les passerelles par défaut.
 
- * pour activer des ponts supplémentaires (un pont par ligne)
- * pour désactiver les ponts principaux (supprimer la ligne)
- * pour activer toutes les passerelles (juste un joker `*` comme contenu du fichier).
+Si vous ne voulez activer aucune passerelle, modifiez le fichier `__INSTALL_DIR__/config.ini.php` :
 
-Pour des raisons de simplicité, ce paquetage YunoHost active toutes les passerelles par défaut.
+```
+
+[system]
+
+; Seules ces 3 passerelles sont activées
+enabled_bridges[] = CssSelectorBridge
+ponts activés[] = FeedMerge
+ponts activés[] = Pont FeedReducer
+
+;enabled_bridges[] = *
+```

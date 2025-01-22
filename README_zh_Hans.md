@@ -5,7 +5,9 @@
 
 # YunoHost 上的 RSS-Bridge
 
-[![集成程度](https://dash.yunohost.org/integration/rss-bridge.svg)](https://dash.yunohost.org/appci/app/rss-bridge) ![工作状态](https://ci-apps.yunohost.org/ci/badges/rss-bridge.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/rss-bridge.maintain.svg)
+[![集成程度](https://apps.yunohost.org/badge/integration/rss-bridge)](https://ci-apps.yunohost.org/ci/apps/rss-bridge/)
+![工作状态](https://apps.yunohost.org/badge/state/rss-bridge)
+![维护状态](https://apps.yunohost.org/badge/maintained/rss-bridge)
 
 [![使用 YunoHost 安装 RSS-Bridge](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rss-bridge)
 
@@ -53,7 +55,7 @@ Output format can take several forms:
  * `Plaintext` : raw text (php object, as returned by print_r)
  
 
-**分发版本：** 2024.02.02~ynh1
+**分发版本：** 2025.01.02~ynh1
 
 **演示：** <https://wtf.roflcopter.fr/rss-bridge/>
 

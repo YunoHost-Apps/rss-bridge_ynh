@@ -1,22 +1,22 @@
 <!--
-Este archivo README esta generado automaticamente<https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
-No se debe editar a mano.
+N.B.: README ini dibuat secara otomatis oleh <https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
+Ini TIDAK boleh diedit dengan tangan.
 -->
 
-# RSS-Bridge para Yunohost
+# RSS-Bridge untuk YunoHost
 
-[![Nivel de integración](https://apps.yunohost.org/badge/integration/rss-bridge)](https://ci-apps.yunohost.org/ci/apps/rss-bridge/)
-![Estado funcional](https://apps.yunohost.org/badge/state/rss-bridge)
-![Estado En Mantención](https://apps.yunohost.org/badge/maintained/rss-bridge)
+[![Tingkat integrasi](https://apps.yunohost.org/badge/integration/rss-bridge)](https://ci-apps.yunohost.org/ci/apps/rss-bridge/)
+![Status kerja](https://apps.yunohost.org/badge/state/rss-bridge)
+![Status pemeliharaan](https://apps.yunohost.org/badge/maintained/rss-bridge)
 
-[![Instalar RSS-Bridge con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rss-bridge)
+[![Pasang RSS-Bridge dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rss-bridge)
 
-*[Leer este README en otros idiomas.](./ALL_README.md)*
+*[Baca README ini dengan bahasa yang lain.](./ALL_README.md)*
 
-> *Este paquete le permite instalarRSS-Bridge rapidamente y simplement en un servidor YunoHost.*  
-> *Si no tiene YunoHost, visita [the guide](https://yunohost.org/install) para aprender como instalarla.*
+> *Paket ini memperbolehkan Anda untuk memasang RSS-Bridge secara cepat dan mudah pada server YunoHost.*  
+> *Bila Anda tidak mempunyai YunoHost, silakan berkonsultasi dengan [panduan](https://yunohost.org/install) untuk mempelajari bagaimana untuk memasangnya.*
 
-## Descripción general
+## Ringkasan
 
 RSS-Bridge is a PHP project capable of generating RSS and Atom feeds for websites that don't have one. It can be used on webservers or as a stand-alone application in CLI mode.
 
@@ -55,31 +55,31 @@ Output format can take several forms:
  * `Plaintext` : raw text (php object, as returned by print_r)
  
 
-**Versión actual:** 2025.01.02~ynh1
+**Versi terkirim:** 2025.01.02~ynh1
 
 **Demo:** <https://wtf.roflcopter.fr/rss-bridge/>
 
-## Capturas
+## Tangkapan Layar
 
-![Captura de RSS-Bridge](./doc/screenshots/screenshot_rss-bridge_welcome.png)
+![Tangkapan Layar pada RSS-Bridge](./doc/screenshots/screenshot_rss-bridge_welcome.png)
 
-## Documentaciones y recursos
+## Dokumentasi dan sumber daya
 
-- Documentación administrador oficial: <https://github.com/RSS-Bridge/rss-bridge/wiki>
-- Repositorio del código fuente oficial de la aplicación : <https://github.com/RSS-Bridge/rss-bridge>
-- Catálogo YunoHost: <https://apps.yunohost.org/app/rss-bridge>
-- Reportar un error: <https://github.com/YunoHost-Apps/rss-bridge_ynh/issues>
+- Dokumentasi admin resmi: <https://github.com/RSS-Bridge/rss-bridge/wiki>
+- Depot kode aplikasi hulu: <https://github.com/RSS-Bridge/rss-bridge>
+- Gudang YunoHost: <https://apps.yunohost.org/app/rss-bridge>
+- Laporkan bug: <https://github.com/YunoHost-Apps/rss-bridge_ynh/issues>
 
-## Información para desarrolladores
+## Info developer
 
-Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/rss-bridge_ynh/tree/testing).
+Silakan kirim pull request ke [`testing` branch](https://github.com/YunoHost-Apps/rss-bridge_ynh/tree/testing).
 
-Para probar la rama `testing`, sigue asÍ:
+Untuk mencoba branch `testing`, silakan dilanjutkan seperti:
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/rss-bridge_ynh/tree/testing --debug
-o
+atau
 sudo yunohost app upgrade rss-bridge -u https://github.com/YunoHost-Apps/rss-bridge_ynh/tree/testing --debug
 ```
 
-**Mas informaciones sobre el empaquetado de aplicaciones:** <https://yunohost.org/packaging_apps>
+**Info lebih lanjut mengenai pemaketan aplikasi:** <https://yunohost.org/packaging_apps>

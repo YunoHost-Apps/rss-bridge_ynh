@@ -1,22 +1,22 @@
 <!--
-Este archivo README esta generado automaticamente<https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
-No se debe editar a mano.
+NB: Deze README is automatisch gegenereerd door <https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
+Hij mag NIET handmatig aangepast worden.
 -->
 
-# RSS-Bridge para Yunohost
+# RSS-Bridge voor Yunohost
 
-[![Nivel de integración](https://apps.yunohost.org/badge/integration/rss-bridge)](https://ci-apps.yunohost.org/ci/apps/rss-bridge/)
-![Estado funcional](https://apps.yunohost.org/badge/state/rss-bridge)
-![Estado En Mantención](https://apps.yunohost.org/badge/maintained/rss-bridge)
+[![Integratieniveau](https://apps.yunohost.org/badge/integration/rss-bridge)](https://ci-apps.yunohost.org/ci/apps/rss-bridge/)
+![Mate van functioneren](https://apps.yunohost.org/badge/state/rss-bridge)
+![Onderhoudsstatus](https://apps.yunohost.org/badge/maintained/rss-bridge)
 
-[![Instalar RSS-Bridge con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rss-bridge)
+[![RSS-Bridge met Yunohost installeren](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rss-bridge)
 
-*[Leer este README en otros idiomas.](./ALL_README.md)*
+*[Deze README in een andere taal lezen.](./ALL_README.md)*
 
-> *Este paquete le permite instalarRSS-Bridge rapidamente y simplement en un servidor YunoHost.*  
-> *Si no tiene YunoHost, visita [the guide](https://yunohost.org/install) para aprender como instalarla.*
+> *Met dit pakket kun je RSS-Bridge snel en eenvoudig op een YunoHost-server installeren.*  
+> *Als je nog geen YunoHost hebt, lees dan [de installatiehandleiding](https://yunohost.org/install), om te zien hoe je 'm installeert.*
 
-## Descripción general
+## Overzicht
 
 RSS-Bridge is a PHP project capable of generating RSS and Atom feeds for websites that don't have one. It can be used on webservers or as a stand-alone application in CLI mode.
 
@@ -55,31 +55,31 @@ Output format can take several forms:
  * `Plaintext` : raw text (php object, as returned by print_r)
  
 
-**Versión actual:** 2025.01.02~ynh1
+**Geleverde versie:** 2025.01.02~ynh1
 
 **Demo:** <https://wtf.roflcopter.fr/rss-bridge/>
 
-## Capturas
+## Schermafdrukken
 
-![Captura de RSS-Bridge](./doc/screenshots/screenshot_rss-bridge_welcome.png)
+![Schermafdrukken van RSS-Bridge](./doc/screenshots/screenshot_rss-bridge_welcome.png)
 
-## Documentaciones y recursos
+## Documentatie en bronnen
 
-- Documentación administrador oficial: <https://github.com/RSS-Bridge/rss-bridge/wiki>
-- Repositorio del código fuente oficial de la aplicación : <https://github.com/RSS-Bridge/rss-bridge>
-- Catálogo YunoHost: <https://apps.yunohost.org/app/rss-bridge>
-- Reportar un error: <https://github.com/YunoHost-Apps/rss-bridge_ynh/issues>
+- Officiele beheerdersdocumentatie: <https://github.com/RSS-Bridge/rss-bridge/wiki>
+- Upstream app codedepot: <https://github.com/RSS-Bridge/rss-bridge>
+- YunoHost-store: <https://apps.yunohost.org/app/rss-bridge>
+- Meld een bug: <https://github.com/YunoHost-Apps/rss-bridge_ynh/issues>
 
-## Información para desarrolladores
+## Ontwikkelaarsinformatie
 
-Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/rss-bridge_ynh/tree/testing).
+Stuur je pull request alsjeblieft naar de [`testing`-branch](https://github.com/YunoHost-Apps/rss-bridge_ynh/tree/testing).
 
-Para probar la rama `testing`, sigue asÍ:
+Om de `testing`-branch uit te proberen, ga als volgt te werk:
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/rss-bridge_ynh/tree/testing --debug
-o
+of
 sudo yunohost app upgrade rss-bridge -u https://github.com/YunoHost-Apps/rss-bridge_ynh/tree/testing --debug
 ```
 
-**Mas informaciones sobre el empaquetado de aplicaciones:** <https://yunohost.org/packaging_apps>
+**Verdere informatie over app-packaging:** <https://yunohost.org/packaging_apps>

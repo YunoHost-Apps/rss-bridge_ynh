@@ -16,12 +16,14 @@ admindoc = "https://github.com/RSS-Bridge/rss-bridge/wiki"
 code = "https://github.com/RSS-Bridge/rss-bridge"
 
 [integration]
-yunohost = ">= 11.2.18"
+yunohost = ">= 12.0.9"
 helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
+
 ldap = false
 sso = false
+
 disk = "50M"
 ram.build = "300M"
 ram.runtime = "50M"
@@ -54,5 +56,5 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.apt]
-    packages = "php8.2-fpm, php8.2-mbstring, php8.2-xml, php8.2-curl"
+    packages = "php8.3-mbstring, php8.3-xml, php8.3-curl"
     

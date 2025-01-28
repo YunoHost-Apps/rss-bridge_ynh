@@ -55,7 +55,7 @@ Output format can take several forms:
  * `Plaintext` : raw text (php object, as returned by print_r)
  
 
-**Versión proporcionada:** 2025.01.02~ynh2
+**Versión proporcionada:** 2025.01.26~ynh1
 
 **Demo:** <https://wtf.roflcopter.fr/rss-bridge/>
 

@@ -55,7 +55,7 @@ Le format de sortie peut prendre plusieurs formes :
  * `Plaintext` : texte brut (objet PHP, tel que retourné par print_r)
  
 
-**Version incluse :** 2025.01.02~ynh2
+**Version incluse :** 2025.01.26~ynh1
 
 **Démo :** <https://wtf.roflcopter.fr/rss-bridge/>
 

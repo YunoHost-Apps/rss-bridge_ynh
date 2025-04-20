@@ -1,0 +1,3 @@
+## Custom bridges
+If you tweaked existing bridges or added custom ones, **you will have to restore them manually after upgrade**. Upgrading to the next version of RSS Bridge will indeed overwrite existing bridges with updated ones (in order to make sure than obsolete bridges are deleted and do not prevent RSS Bridge from working). 
+In this case, it is recommended to back your custom bridges manually (located by default at `/var/www/rss-bridge/bridges/`) prior to upgrading to be on the safest side (although they will be included in the automatic pre-upgrade backup that should also be performed).

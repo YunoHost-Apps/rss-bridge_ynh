@@ -22,7 +22,7 @@ Important : RSS-Bridge n'est pas un lecteur ou un agrégateur de flux, mais un o
  * `ThePirateBay` : Retourne les derniers torrents indexés de [The Pirate Bay](https://thepiratebay.se/) avec des mots-clés.
  * `Facebook` : renvoie les derniers messages d'une page ou d'un profil sur [Facebook](https://facebook.com/)
 
-Plus [beaucoup d'autres ponts](bridges/) à activer, grâce à la communauté.
+Plus [beaucoup d'autres ponts](https://github.com/RSS-Bridge/rss-bridge/tree/master/bridges) à activer, grâce à la communauté.
 
  ### Format de sortie
 
@@ -33,4 +33,3 @@ Le format de sortie peut prendre plusieurs formes :
  * `Json` : Json, pour la consommation par d'autres applications.
  * `Html` : page html simple.
  * `Plaintext` : texte brut (objet PHP, tel que retourné par print_r)
- 

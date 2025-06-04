@@ -22,7 +22,7 @@ Important: RSS-Bridge is not a feed reader or feed aggregator, but a tool to gen
  * `ThePirateBay` : Returns the newest indexed torrents from [The Pirate Bay](https://thepiratebay.se/) with keywords
  * `Facebook` : Returns the latest posts on a page or profile on [Facebook](https://facebook.com/)
 
-Plus [many other bridges](bridges/) to enable, thanks to the community
+Plus [many other bridges](https://github.com/RSS-Bridge/rss-bridge/tree/master/bridges) to enable, thanks to the community
 
 ### Output format
 
@@ -33,4 +33,3 @@ Output format can take several forms:
  * `Json` : Json, for consumption by other applications.
  * `Html` : Simple html page.
  * `Plaintext` : raw text (php object, as returned by print_r)
- 

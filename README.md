@@ -11,7 +11,7 @@ It shall NOT be edited by hand.
 RSS and Atom feed generator for websites that don't have one
 
 [![App Demo](https://img.shields.io/badge/App_Demo-blue?style=for-the-badge)](https://wtf.roflcopter.fr/rss-bridge/)
-[![Version: 2025.08.05~ynh2](https://img.shields.io/badge/Version-2025.08.05~ynh2-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/rss-bridge/)
+[![Version: 2025.08.05~ynh3](https://img.shields.io/badge/Version-2025.08.05~ynh3-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/rss-bridge/)
 
 <div align="center">
 <a href="https://apps.yunohost.org/app/rss-bridge"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_more_info_on_the_appstore.svg"/></a>

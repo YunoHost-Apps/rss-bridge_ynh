@@ -5,7 +5,7 @@ name = "RSS-Bridge"
 description.en = "RSS and Atom feed generator for websites that don't have one"
 description.fr = "Générateur de flux RSS et Atom pour les sites Web qui n'en ont pas"
 
-version = "2025.08.05~ynh1"
+version = "2025.08.05~ynh3"
 
 maintainers = ["JimboJoe","Lapineige"]
 
@@ -16,7 +16,7 @@ admindoc = "https://github.com/RSS-Bridge/rss-bridge/wiki"
 code = "https://github.com/RSS-Bridge/rss-bridge"
 
 [integration]
-yunohost = ">= 12.0.9"
+yunohost = ">= 12.1.17"
 helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
